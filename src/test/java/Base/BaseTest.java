@@ -59,7 +59,8 @@ public class BaseTest {
     public void setExtent(){
         Date d = new Date();
         String extentName = d.toString().replace(":", "_").replace(" ", "_");
-        reporter = new ExtentSparkReporter(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\Report_"+extentName+".html");
+//        reporter = new ExtentSparkReporter(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\Report_"+extentName+".html");
+        reporter = new ExtentSparkReporter(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\extent.html");
         reporter.config().setDocumentTitle("Automation Report");
         reporter.config().setReportName("Regression Report");
         reporter.config().setTheme(Theme.DARK);
