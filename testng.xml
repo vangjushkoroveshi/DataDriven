@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DataDriven Framework" thread-count="2" parallel="tests">
+    <parameter name="IRetry" value='1'/>   <!-- This parameter is used as counter to know how many time to Retry Test Fails ... -->
+    <test name="SwagLabs">
+        <classes>
+            <class name="Tests.SwagLabs.Login"></class>
+<!--            <class name="Tests.SwagLabs.HomePage"></class>-->
+<!--            <class name="Tests.SwagLabs.ProductsPage"></class>-->
+<!--            <class name="Tests.SwagLabs.AddToCard"></class>-->
+        </classes>
+    </test>
+</suite>
