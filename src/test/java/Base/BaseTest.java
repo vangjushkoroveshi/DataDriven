@@ -46,7 +46,6 @@ public class BaseTest {
     public static String BROWSER = System.getProperty("BROWSER");
     public static String PLATFORM_NAME = System.getProperty("PLATFORM_NAME");
     protected String URL = "https://www.saucedemo.com/";
-//protected String URL = "https://www.godaddy.com/";
 
     @BeforeSuite(alwaysRun = true)
     @Parameters("IRetry")

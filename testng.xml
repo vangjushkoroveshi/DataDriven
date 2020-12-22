@@ -3,11 +3,13 @@
 <suite name="DataDriven Framework" thread-count="2" parallel="tests">
     <parameter name="IRetry" value='1'/>   <!-- This parameter is used as counter to know how many time to Retry Test Fails ... -->
     <test name="SwagLabs">
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="Tests.SwagLabs.Login"></class>
 <!--            <class name="Tests.SwagLabs.HomePage"></class>-->
 <!--            <class name="Tests.SwagLabs.ProductsPage"></class>-->
 <!--            <class name="Tests.SwagLabs.AddToCard"></class>-->
+
         </classes>
     </test>
 </suite>
