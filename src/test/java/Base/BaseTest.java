@@ -136,7 +136,7 @@ public class BaseTest {
 
     @AfterClass
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 
     // Remove from comment if you want to send the reports to email
