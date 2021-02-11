@@ -21,12 +21,11 @@ public class Login extends BaseTest {
             if (MyActions.isTestable(testData.getExecution())) {
                 MyActions.type(WebConstants.USERNAME_INPUT, "USERNAME_INPUT", testData.getUsername());
                 MyActions.type(WebConstants.PASSWORD_INPUT, "PASSWORD_INPUT", testData.getPassword());
+                MyActions.scrollAndClick(WebConstants.LOGIN_BUTTON, "LOGIN_BUTTON");
+                wait.until(ExpectedConditions.visibilityOfElementLocated(WebConstants.PRODUCTS_LABEL));
+                Assert.assertEquals(driver.findElement(WebConstants.PRODUCTS_LABEL).getText(),"Products");
             }
         }
-        MyActions.scrollAndClick(WebConstants.LOGIN_BUTTON, "LOGIN_BUTTON");
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(WebConstants.PRODUCTS_LABEL));
-        Assert.assertEquals(driver.findElement(WebConstants.PRODUCTS_LABEL).getText(),"Products");
     }
 }
 
